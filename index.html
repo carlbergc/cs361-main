@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlanO - Weekly Meal Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="planner-container">
+        <h1>PlanO - Weekly Meal Planner</h1>
+        <div id="meals-and-water">
+            <div id="meal-plan">
+                <!-- First meal section -->
+                <div class="meal-row">
+                    <div class="meal-label">Meal 1:</div>
+                    <div class="meal-content">
+                        <button class="add-meal-btn" data-meal="1">Add Meal</button>
+                        <button class="add-ingredient-btn" data-meal="1">Add Ingredient</button>
+                        <button class="remove-meal-btn" data-meal="1">Remove</button>
+                        <ul class="meal-list" id="meal-list-1"></ul>
+                    </div>
+                </div>
+                
+                <!-- Second meal section -->
+                <div class="meal-row">
+                    <div class="meal-label">Meal 2:</div>
+                    <div class="meal-content">
+                        <button class="add-meal-btn" data-meal="2">Add Meal</button>
+                        <button class="add-ingredient-btn" data-meal="2">Add Ingredient</button>
+                        <button class="remove-meal-btn" data-meal="2">Remove</button>
+                        <ul class="meal-list" id="meal-list-2"></ul>
+                    </div>
+                </div>
+                
+                <!-- Third meal section -->
+                <div class="meal-row">
+                    <div class="meal-label">Meal 3:</div>
+                    <div class="meal-content">
+                        <button class="add-meal-btn" data-meal="3">Add Meal</button>
+                        <button class="add-ingredient-btn" data-meal="3">Add Ingredient</button>
+                        <button class="remove-meal-btn" data-meal="3">Remove</button>
+                        <ul class="meal-list" id="meal-list-3"></ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="water-tracker">
+                <h3>Water Tracker</h3>
+                <div class="water-glasses">
+                    <div class="water-glass"></div>
+                    <div class="water-glass"></div>
+                    <div class="water-glass"></div>
+                    <div class="water-glass"></div>
+                    <div class="water-glass"></div>
+                    <div class="water-glass"></div>
+                    <div class="water-glass"></div>
+                    <div class="water-glass"></div>
+                </div>
+                <div class="water-buttons">
+                    <button id="add-water">Add 16oz</button>
+                    <button id="remove-water">Remove 16oz</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="lists">
+            <div class="list-section" id="grocery-list">
+                <h2>Grocery List</h2>
+                <div class="list-controls">
+                    <button class="add-ingredient-btn" data-meal="grocery">Add Ingredient</button>
+                    <button id="remove-grocery">Remove</button>
+                    <button id="fullscreen-grocery">View</button>
+                </div>
+                <ul id="grocery-items">
+                    <!-- This is where grocery list items will appear -->
+                </ul>
+            </div>
+            
+            <div class="list-section" id="saved-meals">
+                <h2>Saved Meals</h2>
+                <div class="list-controls">
+                    <button id="add-saved-meal">Add</button>
+                    <button id="remove-saved-meal">Remove</button>
+                </div>
+                <ul id="saved-meal-items">
+                    <!-- Saved meals will be added here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup for choosing ingredients -->
+    <div id="ingredient-modal" class="ingredient-modal">
+        <div class="modal-content">
+            <h3>Select an Ingredient</h3>
+            <button id="ingredient-help-button">Need Help?</button>
+            <div class="search-container">
+                <input type="text" id="ingredient-search" placeholder="Search ingredients...">
+            </div>
+            <ul id="ingredient-list" class="ingredient-list">
+                <!-- Ingredient choices will be populated here -->
+            </ul>
+            <div style="text-align: right; margin-top: 15px;">
+                <button id="cancel-ingredient">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fullscreen grocery list popup -->
+    <div id="grocery-fullscreen-modal" class="fullscreen-modal">
+        <div class="fullscreen-content">
+            <div id="planner-header">
+                <button id="back-button" style="margin-right: 10px;">Back</button>
+                <button id="help-button">Need Help?</button>
+            </div>
+            <div class="fullscreen-header">
+                <h2>Grocery List</h2>
+            </div>
+            <ul id="grocery-items-fullscreen">
+                <!-- This will show the grocery list in full -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
